@@ -25,7 +25,7 @@ class RecipeView extends View {
       const marked = e.target.closest('.btn--bookmark');
       if (!marked) return;
       handler();
-    //   console.log(this._state.bookmarked);
+      //   console.log(this._state.bookmarked);
     });
   }
 
@@ -77,7 +77,7 @@ class RecipeView extends View {
           </div>
         </div>
 
-        <div class="recipe__user-generated ${this._data.key ? "" : "hidden"}">
+        <div class="recipe__user-generated ${this._data.key ? '' : 'hidden'}">
           <svg>
             <use href="${icons}#icon-user"></use>
           </svg>
@@ -129,7 +129,7 @@ class RecipeView extends View {
         <use href="${icons}#icon-check"></use>
       </svg>
       <div class="recipe__quantity">${
-        ing.quantity ? new fracty(+ing.quantity).toString() : ''
+        ing.quantity ? fracty(+ing.quantity).toString() : ''
       }</div>
       <div class="recipe__description">
         <span class="recipe__unit">${ing.unit}</span>
